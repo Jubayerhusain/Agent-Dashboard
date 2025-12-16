@@ -1,6 +1,7 @@
 import React from "react";
 import Stats from "../Components/dashboard/Stats";
 import PropertyAnalytics from "../Components/dashboard/PropertyAnalytics";
+import RecentMessages from "../Components/dashboard/RecentMessages";
 
 const Dashboard = () => {
   return (
@@ -10,11 +11,13 @@ const Dashboard = () => {
       </header>
       <div>
         <Stats />
-        <div className="flex justify-between items-center my-6">
+        <div className="flex justify-between items-top gap-6 my-6">
           <div className="w-6/12">
             <PropertyAnalytics />
           </div>
-          <div className="w-6/12 border border-gray-600"></div>
+          <div className="w-6/12">
+            <RecentMessages />
+          </div>
         </div>
       </div>
     </div>
