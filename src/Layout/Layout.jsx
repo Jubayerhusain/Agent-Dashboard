@@ -11,15 +11,15 @@ import { MdDomainAdd } from "react-icons/md";
 import { TbMessageDots } from "react-icons/tb";
 
 import logo from "../assets/logo.png";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const NavItem = ({ icon: Icon, title, to, isDrawerOpen }) => {
   const isActive = window.location.pathname === to;
 
   return (
     <div className="mb-1">
-      <a
-        href={to}
+      <Link
+        to={to}
         className={`w-full flex items-center ${
           isDrawerOpen ? "justify-start gap-3" : "justify-center"
         } px-3 py-2 ${
@@ -31,7 +31,7 @@ const NavItem = ({ icon: Icon, title, to, isDrawerOpen }) => {
       >
         <Icon size={20} />
         {isDrawerOpen && <span className="text-sm">{title}</span>}
-      </a>
+      </Link>
     </div>
   );
 };
