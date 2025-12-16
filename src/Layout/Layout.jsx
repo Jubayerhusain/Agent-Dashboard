@@ -11,10 +11,11 @@ import { MdDomainAdd } from "react-icons/md";
 import { TbMessageDots } from "react-icons/tb";
 
 import logo from "../assets/logo.png";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 const NavItem = ({ icon: Icon, title, to, isDrawerOpen }) => {
-  const isActive = window.location.pathname === to;
+  const location = useLocation();
+  const isActive = location.pathname === to;
 
   return (
     <div className="mb-1">
@@ -186,10 +187,9 @@ const Layout = () => {
                     <img
                       className="h-full w-full rounded-full"
                       src={
-                        "https://encrypted-tbn0.gstatic.com/imagehttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxz7qJ9pU6Xj2EJKaRDVz-9Bd0xh2LnMklGw&shttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxz7qJ9pU6Xj2EJKaRDVz-9Bd0xh2LnMklGw&ss?q=tbn:ANd9GcTxz7qJ9pU6Xj2EJKaRDVz-9Bd0xh2LnMklGw&s"
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxz7qJ9pU6Xj2EJKaRDVz-9Bd0xh2LnMklGw&s"
                       }
                       alt=""
-                      srcset=""
                     />
                   </div>
                   <div className="flex-1">
