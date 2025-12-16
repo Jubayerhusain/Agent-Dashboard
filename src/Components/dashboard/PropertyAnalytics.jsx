@@ -24,9 +24,9 @@ export default function PropertyAnalytics() {
     <div className="w-full bg-gray-50">
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Property Views Chart */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm">
+        <div className="bg-white rounded-2xl p-2 sm:p-6 shadow-sm">
           <div className="flex items-start justify-between mb-6">
-            <div>
+            <div className='p-4'>
               <h2 className="text-lg font-semibold text-gray-900 mb-2">
                 Property Views
               </h2>

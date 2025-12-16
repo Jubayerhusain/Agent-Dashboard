@@ -11,11 +11,11 @@ const Dashboard = () => {
       </header>
       <div>
         <Stats />
-        <div className="flex justify-between items-top gap-6 my-6">
-          <div className="w-6/12">
+        <div className="flex flex-col sm:flex-row justify-between items-top gap-6 my-6">
+          <div className="md:w-6/12">
             <PropertyAnalytics />
           </div>
-          <div className="w-6/12">
+          <div className="md:w-6/12">
             <RecentMessages />
           </div>
         </div>

@@ -30,7 +30,7 @@ export default function Stats() {
 
   return (
     <div className="w-full bg-gray-50">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {AllStats.map((stat, index) => {
           const Icon = stat.icon;
           return (
