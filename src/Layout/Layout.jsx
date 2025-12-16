@@ -11,6 +11,7 @@ import { MdDomainAdd } from "react-icons/md";
 import { TbMessageDots } from "react-icons/tb";
 
 import logo from "../assets/logo.png";
+import { Outlet } from "react-router-dom";
 
 const NavItem = ({ icon: Icon, title, to, isDrawerOpen }) => {
   const isActive = window.location.pathname === to;
@@ -37,7 +38,7 @@ const NavItem = ({ icon: Icon, title, to, isDrawerOpen }) => {
 
 const SectionLabel = ({ children, isDrawerOpen }) => {
   if (!isDrawerOpen) return null;
-  
+
   return (
     <div className="px-3 py-2 mt-4 mb-2 border-t border-gray-200">
       <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
@@ -112,34 +113,34 @@ const Layout = () => {
               <NavItem
                 icon={MdDashboard}
                 title="Dashboard"
-                to="/dashboard"
+                to="/"
                 isDrawerOpen={isDrawerOpen}
               />
-              
+
               <NavItem
                 icon={MdMessage}
                 title="Message"
-                to="/message"
+                to="/message-inbox"
                 isDrawerOpen={isDrawerOpen}
               />
 
               {/* Profile Section */}
               <SectionLabel isDrawerOpen={isDrawerOpen}>Profile</SectionLabel>
-              
+
               <NavItem
                 icon={PiUserCircleDuotone}
                 title="Profile"
                 to="/profile"
                 isDrawerOpen={isDrawerOpen}
               />
-              
+
               <NavItem
                 icon={IoMdSettings}
                 title="Account Settings"
                 to="/account-settings"
                 isDrawerOpen={isDrawerOpen}
               />
-              
+
               <NavItem
                 icon={FaBusinessTime}
                 title="Membership"
@@ -149,21 +150,21 @@ const Layout = () => {
 
               {/* Listing Section */}
               <SectionLabel isDrawerOpen={isDrawerOpen}>Listing</SectionLabel>
-              
+
               <NavItem
                 icon={PiBuildingOffice}
                 title="My Property"
-                to="/admin/property-list"
+                to="/property-list"
                 isDrawerOpen={isDrawerOpen}
               />
-              
+
               <NavItem
                 icon={MdDomainAdd}
                 title="Add New Property"
-                to="/admin/add-property"
+                to="/add-property"
                 isDrawerOpen={isDrawerOpen}
               />
-              
+
               <NavItem
                 icon={TbMessageDots}
                 title="Reviews"
@@ -182,25 +183,61 @@ const Layout = () => {
                 </div>
                 <div className="flex items-center gap-3 px-3 py-2">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-r from-green-400 to-lime-200 flex items-center justify-center">
-                    <span className="text-sm font-semibold text-gray-800">JW</span>
+                    <img
+                      className="h-full w-full rounded-full"
+                      src={
+                        "https://encrypted-tbn0.gstatic.com/imagehttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxz7qJ9pU6Xj2EJKaRDVz-9Bd0xh2LnMklGw&shttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxz7qJ9pU6Xj2EJKaRDVz-9Bd0xh2LnMklGw&ss?q=tbn:ANd9GcTxz7qJ9pU6Xj2EJKaRDVz-9Bd0xh2LnMklGw&s"
+                      }
+                      alt=""
+                      srcset=""
+                    />
                   </div>
                   <div className="flex-1">
-                    <p className="text-sm font-medium text-gray-800">Jenny Wilson</p>
+                    <p className="text-sm font-medium text-gray-800">
+                      Jenny Wilson
+                    </p>
                     <p className="text-xs text-gray-500">jenny@example.com</p>
                   </div>
                 </div>
                 <button className="w-full mt-2 flex items-center justify-center gap-2 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                   <span>Log out</span>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V3.33333C2 2.97971 2.14048 2.64057 2.39052 2.39052C2.64057 2.14048 2.97971 2 3.33333 2H6M10.6667 11.3333L14 8M14 8L10.6667 4.66667M14 8H6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V3.33333C2 2.97971 2.14048 2.64057 2.39052 2.39052C2.64057 2.14048 2.97971 2 3.33333 2H6M10.6667 11.3333L14 8M14 8L10.6667 4.66667M14 8H6"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </button>
               </div>
             ) : (
               <div className="border-t border-gray-200 pt-4 mt-4 flex justify-center">
-                <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Log out">
-                  <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V3.33333C2 2.97971 2.14048 2.64057 2.39052 2.39052C2.64057 2.14048 2.97971 2 3.33333 2H6M10.6667 11.3333L14 8M14 8L10.6667 4.66667M14 8H6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <button
+                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                  title="Log out"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V3.33333C2 2.97971 2.14048 2.64057 2.39052 2.39052C2.64057 2.14048 2.97971 2 3.33333 2H6M10.6667 11.3333L14 8M14 8L10.6667 4.66667M14 8H6"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </button>
               </div>
@@ -209,10 +246,7 @@ const Layout = () => {
         </aside>
 
         <main className="flex-1 p-5 overflow-scroll h-screen">
-          <div className="bg-white rounded-lg p-6 shadow-sm">
-            <h1 className="text-2xl font-bold mb-4">Welcome to ZedProperty</h1>
-            <p className="text-gray-600">Select a menu item to get started.</p>
-          </div>
+          <Outlet />
         </main>
       </div>
     </div>
