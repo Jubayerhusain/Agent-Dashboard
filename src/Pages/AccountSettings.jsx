@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import SettingsForm from "../Components/accountSettings/SettingsForm";
 
 const AccountSettings = () => {
-    return (
-        <div>
-            this is Account Settings page
-        </div>
-    )
-}
+  return (
+    <div>
+      <SettingsForm />
+    </div>
+  );
+};
 
-export default AccountSettings
+export default AccountSettings;
