@@ -1,9 +1,12 @@
 import React from 'react'
+import ProfileForm from '../Components/profile/ProfileForm'
+import AddressLocationForm from '../Components/profile/AddressLocationForm'
 
 const Profile = () => {
     return (
         <div>
-            this is Profile page
+            <ProfileForm />
+            <AddressLocationForm />
         </div>
     )
 }
