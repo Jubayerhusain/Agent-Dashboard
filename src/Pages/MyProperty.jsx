@@ -1,9 +1,10 @@
 import React from 'react'
+import MyAllProperty from '../Components/myProperty/MyAllProperty'
 
 const MyProperty = () => {
     return (
         <div>
-            this is My Property page
+            <MyAllProperty />
         </div>
     )
 }
