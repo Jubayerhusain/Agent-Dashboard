@@ -3,7 +3,7 @@ import React from 'react'
 const AddProperty = () => {
     return (
         <div>
-            this is Add Property page
+            this is Add Property 
         </div>
     )
 }
