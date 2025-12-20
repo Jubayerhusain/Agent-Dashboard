@@ -1,9 +1,10 @@
 import React from 'react'
+import ReviewsSection from '../Components/reviews/ReviewsSection'
 
 const Reviews = () => {
     return (
         <div>
-            this is Reviews page
+            <ReviewsSection />
         </div>
     )
 }
