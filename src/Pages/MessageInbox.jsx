@@ -4,7 +4,7 @@ const MessageInbox = () => {
     return (
         <div>
             this is Message Inbox page
-        </div>
+        </div> 
     )
 }
 

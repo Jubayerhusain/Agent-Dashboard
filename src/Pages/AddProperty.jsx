@@ -1,9 +1,10 @@
 import React from 'react'
+import AddNewProparty from '../Components/addProperty/AddNewProparty'
 
 const AddProperty = () => {
     return (
         <div>
-            this is Add Property 
+            <AddNewProparty />
         </div>
     )
 }
