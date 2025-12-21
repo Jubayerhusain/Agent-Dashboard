@@ -4,7 +4,7 @@ import { SlPicture } from "react-icons/sl";
 
 const AddNewProparty = () => {
   return (
-    <div className="w-full   ">
+    <div className="w-full ">
       {/* 1st section  */}
       <div>
         <h1 className="text-[16px] font-medium my-5 rounded-xl p-5 w-full bg-white">
