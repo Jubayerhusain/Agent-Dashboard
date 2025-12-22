@@ -1,6 +1,6 @@
 import React from "react";
 import { SlPicture } from "react-icons/sl";
-// import image1 from "../../assets/map.png"
+// import image1 from "../../assets/map.png";
 
 const AddNewProparty = () => {
   return (
@@ -395,9 +395,9 @@ const AddNewProparty = () => {
               className="input w-full"
             />
           </div>
-          <div>
-            {/* <img src={"image1"} alt="" className=" w-full h-full" /> */}
-          </div>
+          {/* <div className="w-full h-full">
+            <img src={"image11"} alt="" className=" w-full h-full" />
+          </div> */}
       </div>
     </div>
   );
